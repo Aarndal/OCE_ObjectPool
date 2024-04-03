@@ -3,10 +3,11 @@ using UnityEngine;
 
 public class MyObjectPool : MonoBehaviour
 {
-    public static MyObjectPool Instance;
-    public List<GameObject> pooledObjects;
-    public GameObject objectToPool;
-    public int amountToPool;
+    [SerializeField] private List<GameObject> pooledObjects;
+    [SerializeField] private GameObject objectToPool;
+    [SerializeField] private int amountToPool;
+
+    public static MyObjectPool Instance { get; set; }
 
     void Awake()
     {
